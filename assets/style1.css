@@ -1,0 +1,236 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif; /* Clean, professional font like Planet Fitness */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('background.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    animation: bgSlideFade 1s ease-out forwards; /* Background slides left to right */
+}
+
+/* Background slide animation */
+@keyframes bgSlideFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Background overlay for text readability without dulling image */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Light overlay for vibrant image */
+    z-index: -1;
+}
+
+/* Container for form or content */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Transparent glass effect like Planet Fitness login */
+    backdrop-filter: blur(10px); /* Glassmorphism for sleek look */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: boxSlideFade 1s ease-out forwards; /* Slide from right to left */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px); /* Subtle lift like Planet Fitness UI elements */
+}
+
+/* Slide-in animation for container */
+@keyframes boxSlideFade {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Heading styles */
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff; /* White for all text */
+    margin-bottom: 1.5rem;
+    animation: boxSlideFade 0.8s ease-out;
+    text-transform: uppercase; /* Matches Planet Fitness's bold typography */
+}
+
+/* Error message styles */
+.error {
+    color: #ffffff; /* White for all text */
+    background: rgba(0, 0, 0, 0.4); /* Darker transparent bg */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    animation: shake 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Shake animation for error messages */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Form input group */
+.input-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    display: block;
+    color: #ffffff; /* White for all text */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem; /* Smaller text for labels */
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem; /* Space for icons */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* White transparent border */
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Transparent input bg */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #ffffff; /* White for all text */
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+input:hover, select:hover {
+    transform: translateY(-2px); /* Subtle lift like Planet Fitness inputs */
+}
+
+/* Button styles */
+button, .btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #000000; /* Solid black like Planet Fitness buttons */
+    color: #ffffff; /* White for all text */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Matches Planet Fitness button style */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: #1a1a1a; /* Slightly lighter black on hover */
+    transform: scale(1.05); /* Subtle scale effect for dignified look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Clean shadow */
+}
+
+button:active, .btn:active {
+    transform: scale(1); /* Reset scale on click */
+}
+
+/* Link styles */
+a {
+    color: #ffffff; /* White for all text */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem; /* Smaller text for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #cccccc; /* Light gray on hover for contrast */
+    text-decoration: underline;
+}
+
+/* Space between buttons in question.php */
+.space-y-4 > .btn {
+    margin-bottom: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    button, .btn {
+        padding: 0.65rem;
+        font-size: 1rem;
+    }
+}
+
+/* Pulse animation for welcome page buttons */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.container .btn-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Input icon styling */
+.input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+/* Font Awesome for icons */
+.fa-user, .fa-envelope, .fa-lock {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}

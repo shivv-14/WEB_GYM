@@ -1,0 +1,60 @@
+# WebGym1 - Cleaned Project
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# SQL dumps & backups
+*.sql
+database/*.sql~ 
+*.backup
+
+# Dependencies
+node_modules/
+vendor/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Temp files
+*.tmp
+*.temp
+*.swp
+*~
+
+# IDE
+.vscode/settings.json
+.idea/
+*.sublime-project
+
+# Images (user uploads stay)
+.DS_Store?
+._.DS_Store
+
+# CPP/test junk (blocked)
+*.CPP
+*.cpp
+test_email.*
+generate_*
+
+# Emails
+PHPMailer/
+*.email
+
+# DB dumps
+*.dump
+
+/uploads/placeholder.jpg  # default only if needed
