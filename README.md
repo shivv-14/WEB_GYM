@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # WebGym1 - Clean PHP Gym Management System
 
 ## 🏋️ Structure (Cleaned & Organized)
@@ -266,5 +265,4 @@ http://localhost/webgym
 
 ## 🏷️ Domain
 
-**Full Stack Web Development | Database Management | Web Application**
->>>>>>> cf280474a423c1811b603e5c0db6241f5d3353b1
+**Full Stack Web Development | Database Management | Web Application
